@@ -7,7 +7,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class CatDepense {
+public class CatOperation {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long value;
@@ -43,7 +43,7 @@ public class CatDepense {
         this.label = label;
     }
 
-    public CatDepense() {
+    public CatOperation() {
     }
 
 }
