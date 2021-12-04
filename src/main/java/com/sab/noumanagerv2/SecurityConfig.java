@@ -2,10 +2,9 @@ package com.sab.noumanagerv2;
 
 import java.util.ArrayList;
 import java.util.Collection;
-<<<<<<< HEAD
-=======
+
 import java.util.Collections;
->>>>>>> f98d1096449154397277891dc080e99bd7b25918
+
 
 import com.sab.noumanagerv2.entities.AppUser;
 import com.sab.noumanagerv2.filter.JwtAuthFilter;
@@ -13,15 +12,14 @@ import com.sab.noumanagerv2.filter.JwtAutoriFilter;
 import com.sab.noumanagerv2.service.AccountService;
 
 import org.springframework.beans.factory.annotation.Autowired;
-<<<<<<< HEAD
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-=======
+
 import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+
 import org.springframework.core.Ordered;
->>>>>>> f98d1096449154397277891dc080e99bd7b25918
+
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
@@ -36,12 +34,11 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
-<<<<<<< HEAD
-=======
+
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 import org.springframework.web.filter.CorsFilter;
->>>>>>> f98d1096449154397277891dc080e99bd7b25918
+
 
 @Configuration
 @EnableWebSecurity
@@ -70,10 +67,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
-<<<<<<< HEAD
-=======
 
->>>>>>> f98d1096449154397277891dc080e99bd7b25918
         // http.cors().configurationSource(corsConfigurationSource());
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
         http.authorizeRequests().antMatchers(HttpMethod.POST, "/auth/users").permitAll();
@@ -107,8 +101,6 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
-<<<<<<< HEAD
-=======
     @Bean
     public FilterRegistrationBean<CorsFilter> simpleCorsFilter() {
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
@@ -122,5 +114,5 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         bean.setOrder(Ordered.HIGHEST_PRECEDENCE);
         return bean;
     }
->>>>>>> f98d1096449154397277891dc080e99bd7b25918
+
 }
